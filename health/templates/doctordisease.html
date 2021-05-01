@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+<style>
+  td{
+      padding: 2rem;
+  }
+</style>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Care and Cure Hospital</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">}
+        <link href="{% static 'assets/img/sethoscope.png' %}" rel="icon">
+        <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+      
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+      
+        <!-- Template Main CSS File -->
+        <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+      </head>
+    <body>
+      
+
+<section id="appointment" class="appointment section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title" style="margin-top:2.8em ;">
+        <h2>{{h}}</h2>
+        
+      </div>
+     
+      <center><img src="{{a}}"width="300" height="300" ></center>
+      <br>
+      <h2>Details</h2>
+      <h4>{{e}}</h4>
+      <br>
+      
+      <br>
+      
+   
+    <h3>Medication</h3>
+          <table> 
+            <tr>      
+            <td>
+              
+            <img src="{{image_one}}" alt="" style="height: 10rem;width: 10rem;">
+        <br><br>
+
+        {{med1}}</td>
+            
+            <td>
+            <img src="{{image_two}}" alt="" style="height: 10rem;width: 10rem;">
+        <br><br>
+        {{med2}}
+        </td>
+            
+            <td>
+            <img src="{{image_three}}" alt="" style="height: 10rem;width: 10rem;">
+        <br><br>
+    {{med3}}</td>
+            <td>
+              
+            <img src="{{image_four}}" alt="" style="height: 10rem;width: 10rem;">
+        <br><br>
+        {{med4}}
+    </td>
+          </tr>
+          </table>
+ 
+      <br>
+      <br>
+      <h3>Preventions</h3>
+      <ul>
+        
+        <li>{{b}}</li>
+        <li>{{c}}</li>
+        <li>{{d}}</li>
+        <li>{{f}}</li>
+      </ul>
+      <div class="section-title" style="margin-top:2.8em ;">
+        <h3>FOOD DETAILS</h3>
+        
+      </div>
+      <br>
+      <br>
+      <h5>{{detail}}</h5>
+      <br>
+      <br>
+      {% if food %}
+      <h3>Food you can consume for better recovery</h3>
+      <ul>
+        <li>{{items1}}</li>
+        <li>{{items2}}</li>
+        <li>{{items3}}</li>
+        <li>{{items4}}</li>
+      </ul>
+    
+      {% else %}
+
+      <h3>Nutrient you can consume for better recovery</h3>
+      <ul>
+        <li>{{g}}</li>
+        <li>{{i}}</li>
+        
+      </ul>
+      <br>
+      <br>
+      {%endif%}
+      
+    </div>
+</section>
+
+      
+          
+          
+
+
+
+        
+  <div id="preloader">
+</div>
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+<script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% include "doctor_header.html" %}
+      </body>
+      </html>

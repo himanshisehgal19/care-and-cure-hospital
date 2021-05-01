@@ -1,0 +1,46 @@
+id,doctor,specialisation,email,password
+,Dr. (Maj.)Sharad Shrivastava,physician,sharadshrivastava@gmail.com,doctor@1928
+,Dr. Anirban Biswas,physician,anirbanbiswas@gmail.com,doctor@1928
+,Dr. Aman Vij,physician,amanvij@gmail.com,doctor@1928
+,Dr. Mansi Arya,dermatologist,mansiarya@gmail.com,doctor@1928
+,Dr. Sunil Kumar Dwivedi,dermatologist,sunilkumardwivedi@gmail.com,doctor@1928
+,Dr. Chhavi Bansal,dermatologist,chhavibansal@gmail.com,doctor@1928
+,Dr. Sneh Khera,dermatologist,snehkhera@gmail.com,doctor@1928
+,Dr. Inderjeet Singh,dermatologist,inderjeetsingh@gmail.com,doctor@1928
+,Dr. Suman Mohan,dermatologist,sumanmohan@gmail.com,doctor@1928
+,Dr. Manish Munjal,gastroenterologist,manishmunjal@gmail.com,doctor@1928
+,Dr. Ajay Jain,gastroenterologist,ajayjain@gmail.com,doctor@1928
+,Dr. Anshul Gupta,gastroenterologist,anshulgupta@gmail.com,doctor@1928
+,Dr. B B Khatri,gastroenterologist,bbkhatri@gmail.com,doctor@1928
+,Dr. Rajeev Adhana,gastroenterologist,rajeevadhana@gmail.com,doctor@1928
+,Dr. Vidit Tripathi,gastroenterologist,vidittripathi@gmail.com,doctor@1928
+,Dr. Arun Wadhawan,gastroenterologist,arunwadhawan@gmail.com,doctor@1928
+,Dr. Neha Sood,pulmonologist,nehasood@gmail.com,doctor@1928
+,Dr. Vineet Narula,pulmonologist,vineetnarula@gmail.com,doctor@1928
+,Dr. Yogesh Jain,pulmonologist,yogeshjain@gmail.com,doctor@1928
+,Dr. Rakesh Singh,pulmonologist,rakeshsingh@gmail.com,doctor@1928
+,Dr. Sudha Asokan,osteopathic physician,sudhaasokan@gmail.com,doctor@1928
+,Dr. Mahesh Shah,osteopathic physician,maheshshah@gmail.com,doctor@1928
+,Dr. S K Singh,cardiologist,sksingh@gmail.com,doctor@1928
+,Dr. Sudhir Bhola,cardiologist,sudhirbhola@gmail.com,doctor@1928
+,Dr. Jyoti Arora Monga,cardiologist,jyotiaroramonga@gmail.com,doctor@1928
+,Dr. Vijay Abbot,cardiologist,vijayabbot@gmail.com,doctor@1928
+,Dr. Rakesh Gupta,cardiologist,rakeshgupta@gmail.com,doctor@1928
+,Dr. Sugeeta Mutreja,neurologist,sugeetamutreja@gmail.com,doctor@1928
+,Dr. Ruchi Gupta,neurologist,ruchigupta@gmail.com,doctor@1928
+,Dr. Praveen Rustagi,neurologist,praveenrustagi@gmail.com,doctor@1928
+,Dr. S.K Kashyap,neurologist,s.kkashyap@gmail.com,doctor@1928
+,Dr. Nipun Jain,hepatologist,nipunjain@gmail.com,doctor@1928
+,Dr. Rohit Batra,hepatologist,rohitbatra@gmail.com,doctor@1928
+,Dr. Lipy Gupta,hepatologist,lipygupta@gmail.com,doctor@1928
+,Dr. Gaurav Garg,hepatologist,gauravgarg@gmail.com,doctor@1928
+,Dr. Parmil Kumar Sharma,hepatologist,parmilkumarsharma@gmail.com,doctor@1928
+,Dr. Shruti Gupta,endocrinologist,shrutigupta@gmail.com,doctor@1928
+,Dr. Manisha Chopra,endocrinologist,manishachopra@gmail.com,doctor@1928
+,Dr. Ranjan Upadhyay,endocrinologist,ranjanupadhyay@gmail.com,doctor@1928
+,Dr. Gayatri Bala Juneja,endocrinologist,gayatribalajuneja@gmail.com,doctor@1928
+,Dr. Amarpreet Singh Riar,orthopedist,amarpreetsinghriar@gmail.com,doctor@1928
+,Dr.Rupali Arora,orthopedist,rupaliarora@gmail.com,doctor@1928
+,Dr.Kushal Naidu,orthopedist,kushalnaidu@gmail.com,doctor@1928
+,Dr. V.K. Jain,otolaryngologist,v.k.jain@gmail.com,doctor@1928
+,Dr.Keshav Bansal,otolaryngologist,keshavbansal@gmail.com,doctor@1928

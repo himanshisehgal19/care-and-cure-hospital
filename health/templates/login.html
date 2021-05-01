@@ -1,0 +1,17 @@
+
+<br>
+<br>
+
+<div class="jumbotron">
+    <h1>Please Login!</h1>
+    <form action="{% url 'user_login' %}" method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" required name="username" placeholder="Enter username">
+        <label for="password">Password:</label>
+        <input type="password" required name="password" >
+        <input type="submit" value="Login">
+        </form>
+    </div>
+
+      
