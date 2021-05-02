@@ -28,7 +28,7 @@ SECRET_KEY = 'x0fb2_42tkv6dbi&eu+5^@77*qb(bti(dkyadnp26t46x=@pg='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['carecurehospital.herokuapp.com','127.0.0.1:8000']
+ALLOWED_HOSTS = ['care-and-cure-hospital-app.herokuapp.com','127.0.0.1:8000']
 
 
 # Application definition
