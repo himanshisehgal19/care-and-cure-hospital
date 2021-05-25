@@ -76,6 +76,7 @@ def user_login(request):
 
         if user:
             login(request,user)
+            request.session['patient_id']=user.id
             request.session['email']=user.email
             return HttpResponseRedirect(reverse('base'))
             
