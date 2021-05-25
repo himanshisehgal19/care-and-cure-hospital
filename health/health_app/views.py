@@ -28,6 +28,7 @@ modelnb=joblib.load("modelnb.pkl")
 
 def base(request):
     all_d=doctorlogin.objects.all().order_by('doctor')
+    print('your email is',request.session.get('email'))
     con={'all_d':all_d}
     return render(request,'base.html',con)
 # Create your views here.
@@ -75,6 +76,7 @@ def user_login(request):
 
         if user:
             login(request,user)
+            request.session['email']=user.email
             return HttpResponseRedirect(reverse('base'))
             
         else:
