@@ -21,7 +21,7 @@ from django.contrib.auth.models import User
 from health_app.models import *
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 import joblib
-model=joblib.load("modelrfc.pkl")
+model=joblib.load("modelrfc (1).pkl")
 modelsvm=joblib.load("modelsvm.pkl")
 modelnb=joblib.load("modelnb.pkl")
 
