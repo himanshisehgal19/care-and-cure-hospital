@@ -37,5 +37,8 @@ There is an option of 'Consult of Doctor' that will direct to another page that 
 ![image](https://user-images.githubusercontent.com/55012463/120025439-4daa1780-c00e-11eb-8eaf-9187bd7c5222.png)
 
  ### Doctor Login
- In a Doctor 
+ Each and Every doctor of the hospital have their own login credentials after loging in a doctor can check its appointments example:
+ ![image](https://user-images.githubusercontent.com/55012463/120026505-cf4e7500-c00f-11eb-938a-ab2a5815811b.png)
+
+Also doctors can predict disease via 4 symptoms and in details he/she can even look for medications and food items that can be advised to a patient suffering from a particular disease.
 
