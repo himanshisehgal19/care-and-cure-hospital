@@ -42,3 +42,13 @@ There is an option of 'Consult of Doctor' that will direct to another page that 
 
 Also doctors can predict disease via 4 symptoms and in details he/she can even look for medications and food items that can be advised to a patient suffering from a particular disease.
 
+![image](https://user-images.githubusercontent.com/55012463/120026956-6f0c0300-c010-11eb-8255-d02b86867fc8.png)
+ 
+ The images in the above image are extracted via image scrapping. 
+
+![image](https://user-images.githubusercontent.com/55012463/120026988-7501e400-c010-11eb-8ddf-386bb6d8c89b.png)
+
+USed Web scrapping for food deatils.
+
+## Web Scrapping
+Web Scripting is an automatic method to obtain large amounts of data from websites. Most of this data is unstructured data in an HTML format which is then converted into structured data in a spreadsheet or a database so that it can be used in various applications. There are many different ways to perform web scraping to obtain data from websites.
