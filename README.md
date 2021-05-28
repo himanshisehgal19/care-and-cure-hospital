@@ -17,9 +17,9 @@ The following algorithms have been explored in code:
 The dataset for this problem used with the main.py script is downloaded from here:
 
 ####### https://www.kaggle.com/kaushil268/disease-prediction-using-machine-learning
-##### This dataset has 133 total columns, 132 of them being symptoms experienced by patiend and last column in prognosis for the same.
-##### After the Disease is predicted a button of  'for more details ' appear that will tell the details of that particular disease by using Web Scrapping. Also food that
-##### should be consumed  during this disease along with that the preventions from that disease that is used for better recovery.
+This dataset has 133 total columns, 132 of them being symptoms experienced by patiend and last column in prognosis for the same.
+### After Prediction of Disease
+After the Disease is predicted a button of  'for more details ' appear that will tell the details of that particular disease by using Web Scrapping. Also food tha  should be consumed  during this disease along with that the preventions from that disease that is used for better recovery.
 
 
 
