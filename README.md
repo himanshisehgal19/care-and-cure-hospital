@@ -1,7 +1,7 @@
 # Care-and-Cure-Hospital Project
 This project is a hospital managment and disease prediction project .It consists of 2 login parts the first one is for Patients and Other login is for Doctor
 After registering as a patient When a patient will login a disease predictor page appears that will take 4 symtomps and predict the disease
-
+््र्र्रhttps://care-and-cure-hospital-app.herokuapp.com/
 ### Disease Prediction from Symptoms
 This project explores the use of machine learning algorithms to predict diseases from symptoms.
 
