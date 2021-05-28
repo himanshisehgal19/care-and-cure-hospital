@@ -18,8 +18,11 @@ The dataset for this problem used with the main.py script is downloaded from her
 
 ####### https://www.kaggle.com/kaushil268/disease-prediction-using-machine-learning
 This dataset has 133 total columns, 132 of them being symptoms experienced by patiend and last column in prognosis for the same.
-### After Prediction of Disease
-After the Disease is predicted a button of  'for more details ' appear that will tell the details of that particular disease by using Web Scrapping. Also food tha  should be consumed  during this disease along with that the preventions from that disease that is used for better recovery.
+### After Prediction of Disease of Patient 
+After the Disease is predicted a button of  'for more details ' appear that will tell the details of that particular disease by using Web Scrapping. Also food tha  should be consumed  during this disease along with that the preventions from that disease that is used for better recovery. There is an option of 'Consult of Doctor' that will direct to another page that consists of names of specialists of respective diseases. From this page you can also make an appointment with the any of above specialist.
+ ### Doctor Login
+ In a Doctor 
 
 
 
+![image](https://user-images.githubusercontent.com/55012463/120025201-f7d56f80-c00d-11eb-9fb5-a2a5f06480c8.png)
