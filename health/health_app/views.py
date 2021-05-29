@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeClassifier as ds
 from sklearn.naive_bayes import GaussianNB
 from health_app.models import *
 import pandas as pd
-
+import seaborn as sns
 import numpy as np
 from collections import Counter
 from django.contrib.auth.models import User 
@@ -21,15 +21,15 @@ from django.contrib.auth.models import User
 from health_app.models import *
 from django.core.paginator import Paginator,PageNotAnInteger,EmptyPage
 import joblib
-model=joblib.load("modelrfc (1).pkl")
+model=joblib.load("modelrfc.pkl")
 modelsvm=joblib.load("modelsvm.pkl")
 modelnb=joblib.load("modelnb.pkl")
 
 
 def base(request):
     all_d=doctorlogin.objects.all().order_by('doctor')
-    print('your email is',request.session.get('email'))
-    con={'all_d':all_d}
+    #print('your email is',request.session.get('email'))
+    con={'all_d':all_d }
     return render(request,'base.html',con)
 # Create your views here.
 @login_required
@@ -70,9 +70,7 @@ def user_login(request):
         username=request.POST.get('username')
         password=request.POST.get('password')
         user=authenticate(username=User.objects.get(email=username),password=password)
-        global log
-        def log():
-            return username
+       
 
         if user:
             login(request,user)
@@ -81,8 +79,8 @@ def user_login(request):
             return HttpResponseRedirect(reverse('base'))
             
         else:
-            print("Someone tried to login and failed")
-            print("Username: {} and password{}".format(username,password))
+            #print("Someone tried to login and failed")
+            #print("Username: {} and password{}".format(username,password))
             messages.error(request,'Invalid login details supplied')
             return redirect('/user_login')
     else:
@@ -105,7 +103,7 @@ def dise(request):
     return render(request,'disease.html',context=context_dict)
 
   
-
+#patient
 def prediction(request):
     r=False
     all_sym=symptoms.objects.all().order_by('sym')
@@ -147,9 +145,7 @@ def prediction(request):
             return data.most_common(1)[0][0]
         predicted_disease=Most_Common(disease)
         r=True
-        global val
-        def val():
-            return predicted_disease
+        request.session['predicted_disease']=predicted_disease
       
         cont={'predicted_disease':predicted_disease,'all_sym':all_sym,'r':r}
     
@@ -158,7 +154,7 @@ def prediction(request):
         co={'all_sym':all_sym}
         return render(request,'prediction.html',co)
 
-
+#patient
 def disease_with_details(request):
     all_Disease=disease.objects.all().values()
     all_food=medicines.objects.all().values()
@@ -166,7 +162,7 @@ def disease_with_details(request):
     dfx=pd.DataFrame(all_Disease)
     
     
-    h=val()
+    h=request.session.get('predicted_disease')
     dfy=df[df['Disease']==h]
     dfz=dfx[dfx['Disease']==h]
     a=dfz['image'].iloc[0]
@@ -201,7 +197,7 @@ def disease_with_details(request):
         items2=li[1]
         items3=li[2]
         items4=li[3]
-    print(li)
+    #print(li)
     
     #print(a)
     #print(dfz)
@@ -209,6 +205,7 @@ def disease_with_details(request):
     con={'h':h,'all_Disease' :all_Disease,'a':a,'b':b,'c':c,'d':d,'e':e,'f':f,'g':g,'i':i,'food':food,'items1':items1,'items2':items2,'items3':items3,'items4':items4}
     return render(request,'disease_pre.html',con)
 
+#doctor
 def doctor(request):
     all_doctors=Doctor.objects.all().order_by('doctor')
     all_Disease=disease.objects.all().values()
@@ -216,7 +213,7 @@ def doctor(request):
     dm=pd.DataFrame(all_food)
     doc=disease.objects.all().values()
     df=pd.DataFrame(all_Disease)
-    h=val()
+    h=request.session.get('predicted_disease_d')
     dfx=pd.DataFrame(doc)
     dfz=dfx[dfx['Disease']==h]
     dff=df[df['Disease']==h]
@@ -229,12 +226,10 @@ def doctor(request):
     con={'h':h,'all_doctors' :all_doctors,'a':a,'g':g,'i':i,'j':j}
     return render(request,'doctors.html',con)
 
+#patient
 def consult(request):
-    h=val()
-    l=log()
-    global c
-    def c():
-        return l
+    h=request.session.get('predicted_disease')
+    l=request.session.get('email')
     all_food=medicines.objects.all().values()
     all_doctors=doctorlogin.objects.all().values()
     all_d=doctorlogin.objects.all().order_by('doctor')
@@ -273,7 +268,7 @@ def doctor_login(request):
             return redirect('/doctor_login')
     else:
         return render(request,'doctor_login.html')
-
+#doctor
 def doctorpred(request):
     r=True
     all_sym=symptoms.objects.all().order_by('sym')
@@ -297,21 +292,17 @@ def doctorpred(request):
         dfnew[var4]=1
         #dfnew
        
-        predicted_disease=model.predict(dfnew)
-        predicted_disease=predicted_disease[0]
-        
-        
-        global val
-        def val():
-            return predicted_disease
-       
-        cont={'predicted_disease':predicted_disease,'all_sym':all_sym,'r':r}
+        predicted_disease_d=model.predict(dfnew)
+        predicted_disease_d=predicted_disease_d[0]
+        request.session['predicted_disease_d']=predicted_disease_d
+        cont={'predicted_disease_d':predicted_disease_d,'all_sym':all_sym,'r':r}
         #conte={"reldis":reldis,"reldis2":reldis2,"reldis":reldis3,'all_sym':all_sym}
         return render(request,'doctorpred.html',cont)
     else:
         co={'all_sym':all_sym}
         return render(request,'doctorpred.html',co)
 
+#doctor
 def doctordisease(request):
     all_Disease=disease.objects.all().values()
     all_food=medicines.objects.all().values()
@@ -319,7 +310,7 @@ def doctordisease(request):
     dfx=pd.DataFrame(all_Disease)
     
     
-    h=val()
+    h=request.session.get('predicted_disease_d')
     dfy=df[df['Disease']==h]
     dfz=dfx[dfx['Disease']==h]
     varx=dfy['medicine'].iloc[0]
@@ -368,7 +359,7 @@ def doctordisease(request):
         items2=li[1]
         items3=li[2]
         items4=li[3]
-    print(li)
+    #print(li)
     
     #print(a)
     #print(dfz)
@@ -384,7 +375,7 @@ def doctor_main(request):
 
 def user_app(request):
     all_doctors=doctorlogin.objects.all().values()
-    l=c()
+    
     df=pd.DataFrame(all_doctors)
     if request.method=="POST":
         phone=request.POST['phone']
@@ -395,7 +386,7 @@ def user_app(request):
         date=request.POST['date']
         doctor=request.POST['doctor']
         user1 = request.user.get_username()
-        email=l
+        email=request.session.get('email')
         dfy=df[df['doctor']==doctor]
         em=dfy['email'].iloc[0]
         
@@ -419,7 +410,7 @@ def user_app(request):
     
 
 def table(request):
-    email=request.session['email']
+    email=request.session.get('email')
     all_objects=Appoint.objects.all().values()
     all_obj=Appoint.objects.all()
     df=pd.DataFrame(all_objects)
