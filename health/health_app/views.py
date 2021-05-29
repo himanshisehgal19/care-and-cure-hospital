@@ -191,16 +191,24 @@ def disease_with_details(request):
     else:
         g=dfy['nutrient_1'].iloc[0]
         i=dfy['Nutrient_2'].iloc[0]
-    if len(li)>0:
+    if li[0]:
         items1=li[0]
+    else:
+        items1=''
+    if li[1]:
         items2=li[1]
-        items3=li[2]
-        items4=li[3]
-    #print(li)
-    
-    #print(a)
-    #print(dfz)
-    #print(h)
+    else:
+        items2=''
+    if li[2]:
+        items3=li[0]
+    else:
+        items3=''
+    if li[3]:
+        items4=li[0]
+    else:
+        items4=''
+   
+   
     con={'h':h,'all_Disease' :all_Disease,'a':a,'b':b,'c':c,'d':d,'e':e,'f':f,'g':g,'i':i,'food':food,'items1':items1,'items2':items2,'items3':items3,'items4':items4}
     return render(request,'disease_pre.html',con)
 
