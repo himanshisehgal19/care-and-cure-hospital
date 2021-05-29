@@ -9,7 +9,6 @@ from sklearn.tree import DecisionTreeClassifier as ds
 from sklearn.naive_bayes import GaussianNB
 from health_app.models import *
 import pandas as pd
-import seaborn as sns
 import numpy as np
 from collections import Counter
 from django.contrib.auth.models import User 
