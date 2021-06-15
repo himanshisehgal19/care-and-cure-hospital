@@ -1,5 +1,5 @@
 # Care-and-Cure-Hospital Project
-This project is a hospital managment and disease predictior project .It consists of 2 login parts the first one is for Patients and Other login is for Doctor
+This project is a hospital management and disease predictor project  .It consists of 2 login parts the first one is for Patients and Other login is for Doctor
 After registering as a patient When a patient will login a disease predictor page appears that will take 4 symtomps and predict the disease.
 ##
 ![image](https://user-images.githubusercontent.com/55012463/120025811-dcb72f80-c00e-11eb-896a-4f5f6db1a020.png)
