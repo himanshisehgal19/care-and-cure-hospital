@@ -1,5 +1,7 @@
 # Care-and-Cure-Hospital Project
-##http://care-and-cure-hospital-app.herokuapp.com/
+## http://care-and-cure-hospital-app.herokuapp.com/
+## 
+
 This project is a hospital management and disease predictor project  .It consists of 2 login parts the first one is for Patients and Other login is for Doctor
 After registering as a patient When a patient will login a disease predictor page appears that will take 4 symtomps and predict the disease.
 ##
